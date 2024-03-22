@@ -5,7 +5,7 @@ ES6 JavaScript module for looking up [ISO 639-1 language code](https://en.wikipe
 ## Importing this library
 
 ```js
-import { Language } from "https://esm.sh/gh/doga/language@1.0.1/mod.mjs";
+import { Language } from "https://esm.sh/gh/doga/language@1.0.2/mod.mjs";
 ```
 
 ## Usage
@@ -33,16 +33,18 @@ Running this example is safe, it will not read or write anything to your filesys
 ```javascript
 // import { I18nString, Person } from "https://esm.sh/gh/doga/object-semantic-mapping@0.1.5/mod.mjs";
 // import { Qworum } from "https://esm.sh/gh/doga/qworum-for-web-pages@1.3.5/mod.mjs";
-import { Language } from "https://esm.sh/gh/doga/language@1.0.1/mod.mjs";
+import { Language } from "https://esm.sh/gh/doga/language@1.0.2/mod.mjs";
 
 ['en', 'fr', 'de', 'tr'].forEach(iso639_1 => {
-    console.info(`Language info for ${JSON.stringify(iso639_1)}:`);
-    console.info(`  ISO 639-1:   ${JSON.stringify(iso639_1.code639_1)}`);
-    console.info(`  ISO 639-2:   ${JSON.stringify(iso639_1.code639_2)}`);
-    console.info(`  Family:      ${JSON.stringify(iso639_1.family)}`);
-    console.info(`  Name:        ${JSON.stringify(iso639_1.name)}`);
-    console.info(`  Native name: ${JSON.stringify(iso639_1.nativeName)}`);
-    console.info(`  Wiki URL:    ${JSON.stringify(iso639_1.wikiUrl)}`);
+    const lang = Language.fromCode(iso639_1);
+    if(!lang)return;
+    console.info(`Language info for ${lang}:`);
+    console.info(`  ISO 639-1:   ${JSON.stringify(lang.iso639_1)}`);
+    console.info(`  ISO 639-2:   ${JSON.stringify(lang.iso639_2)}`);
+    console.info(`  Family:      ${JSON.stringify(lang.family)}`);
+    console.info(`  Name:        ${JSON.stringify(lang.name)}`);
+    console.info(`  Native name: ${JSON.stringify(lang.nativeName)}`);
+    console.info(`  Wiki URL:    ${JSON.stringify(lang.wikiUrl)}`);
 });
 ```
 
