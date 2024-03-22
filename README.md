@@ -35,12 +35,12 @@ import { Language } from "https://esm.sh/gh/doga/language@1.0.2/mod.mjs";
     const lang = Language.fromCode(iso639_1);
     if(!lang)return;
     console.info(`Language info for ${lang}:`);
-    console.info(`  ISO 639-1:   ${JSON.stringify(lang.iso639_1)}`);
-    console.info(`  ISO 639-2:   ${JSON.stringify(lang.iso639_2)}`);
-    console.info(`  Name:        ${JSON.stringify(lang.name)}`);
-    console.info(`  Native name: ${JSON.stringify(lang.nativeName)}`);
-    console.info(`  Family:      ${JSON.stringify(lang.family)}`);
-    console.info(`  Wiki URL:    ${JSON.stringify(lang.wikiUrl)}`);
+    console.info(`  ISO 639-1:   ${lang.iso639_1}`);
+    console.info(`  ISO 639-2:   ${lang.iso639_2}`);
+    console.info(`  Name:        ${lang.name}`);
+    console.info(`  Native name: ${lang.nativeName}`);
+    console.info(`  Family:      ${lang.family}`);
+    console.info(`  Wiki URL:    ${lang.wikiUrl}`);
 });
 ```
 
