@@ -4,9 +4,7 @@ ES6 JavaScript module for looking up [ISO 639-1 language code](https://en.wikipe
 
 ## Importing this library
 
-```js
-import { Language } from "https://esm.sh/gh/doga/language@1.0.2/mod.mjs";
-```
+`import { Language } from "https://esm.sh/gh/doga/language@1.0.2/mod.mjs";`
 
 ## Usage
 
@@ -16,8 +14,7 @@ _Tip: Run the following example by typing this in your terminal (requires [Deno]
 deno run \
   --allow-net --allow-run --allow-env --allow-read \
   https://deno.land/x/mdrb/mod.ts \
-  --dax=false \
-  https://raw.githubusercontent.com/doga/object-semantic-mapping/main/README.md
+  https://raw.githubusercontent.com/doga/language/main/README.md
 ```
 
 <details data-mdrb>
@@ -51,7 +48,34 @@ import { Language } from "https://esm.sh/gh/doga/language@1.0.2/mod.mjs";
 Sample output for the code above:
 
 ```text
-
+Language info for en:
+  ISO 639-1:   "en"
+  ISO 639-2:   "eng"
+  Family:      "Indo-European"
+  Name:        "English"
+  Native name: "English"
+  Wiki URL:    "https://en.wikipedia.org/wiki/English_language"
+Language info for fr:
+  ISO 639-1:   "fr"
+  ISO 639-2:   "fra"
+  Family:      "Indo-European"
+  Name:        "French"
+  Native name: "français, langue française"
+  Wiki URL:    "https://en.wikipedia.org/wiki/French_language"
+Language info for de:
+  ISO 639-1:   "de"
+  ISO 639-2:   "deu"
+  Family:      "Indo-European"
+  Name:        "German"
+  Native name: "Deutsch"
+  Wiki URL:    "https://en.wikipedia.org/wiki/German_language"
+Language info for tr:
+  ISO 639-1:   "tr"
+  ISO 639-2:   "tur"
+  Family:      "Turkic"
+  Name:        "Turkish"
+  Native name: "Türkçe"
+  Wiki URL:    "https://en.wikipedia.org/wiki/Turkish_language"
 ```
 
 ∎
