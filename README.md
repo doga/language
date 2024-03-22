@@ -14,7 +14,7 @@ _Tip: Run the following example by typing this in your terminal (requires [Deno]
 deno run \
   --allow-net --allow-run --allow-env --allow-read \
   https://deno.land/x/mdrb/mod.ts \
-  --dax=false  --mode=isolated \
+  --dax=false --mode=isolated \
   https://raw.githubusercontent.com/doga/language/main/README.md
 ```
 
@@ -37,9 +37,9 @@ import { Language } from "https://esm.sh/gh/doga/language@1.0.2/mod.mjs";
     console.info(`Language info for ${lang}:`);
     console.info(`  ISO 639-1:   ${JSON.stringify(lang.iso639_1)}`);
     console.info(`  ISO 639-2:   ${JSON.stringify(lang.iso639_2)}`);
-    console.info(`  Family:      ${JSON.stringify(lang.family)}`);
     console.info(`  Name:        ${JSON.stringify(lang.name)}`);
     console.info(`  Native name: ${JSON.stringify(lang.nativeName)}`);
+    console.info(`  Family:      ${JSON.stringify(lang.family)}`);
     console.info(`  Wiki URL:    ${JSON.stringify(lang.wikiUrl)}`);
 });
 ```
@@ -50,30 +50,30 @@ Sample output for the code above:
 Language info for en:
   ISO 639-1:   "en"
   ISO 639-2:   "eng"
-  Family:      "Indo-European"
   Name:        "English"
   Native name: "English"
+  Family:      "Indo-European"
   Wiki URL:    "https://en.wikipedia.org/wiki/English_language"
 Language info for fr:
   ISO 639-1:   "fr"
   ISO 639-2:   "fra"
-  Family:      "Indo-European"
   Name:        "French"
   Native name: "français, langue française"
+  Family:      "Indo-European"
   Wiki URL:    "https://en.wikipedia.org/wiki/French_language"
 Language info for de:
   ISO 639-1:   "de"
   ISO 639-2:   "deu"
-  Family:      "Indo-European"
   Name:        "German"
   Native name: "Deutsch"
+  Family:      "Indo-European"
   Wiki URL:    "https://en.wikipedia.org/wiki/German_language"
 Language info for tr:
   ISO 639-1:   "tr"
   ISO 639-2:   "tur"
-  Family:      "Turkic"
   Name:        "Turkish"
   Native name: "Türkçe"
+  Family:      "Turkic"
   Wiki URL:    "https://en.wikipedia.org/wiki/Turkish_language"
 ```
 
