@@ -14,6 +14,7 @@ _Tip: Run the following example by typing this in your terminal (requires [Deno]
 deno run \
   --allow-net --allow-run --allow-env --allow-read \
   https://deno.land/x/mdrb/mod.ts \
+  --dax=false  --mode=isolated \
   https://raw.githubusercontent.com/doga/language/main/README.md
 ```
 
