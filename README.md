@@ -29,8 +29,6 @@ Running this example is safe, it will not read or write anything to your filesys
 </details>
 
 ```javascript
-// import { I18nString, Person } from "https://esm.sh/gh/doga/object-semantic-mapping@0.1.5/mod.mjs";
-// import { Qworum } from "https://esm.sh/gh/doga/qworum-for-web-pages@1.3.5/mod.mjs";
 import { Language } from "https://esm.sh/gh/doga/language@1.0.2/mod.mjs";
 
 ['en', 'fr', 'de', 'tr'].forEach(iso639_1 => {
