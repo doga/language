@@ -1,22 +1,15 @@
 # language
 
-ES6 JavaScript module for looking up [ISO 639-1 language code](https://en.wikipedia.org/wiki/ISO_639-1) info.
+A JavaScript library for handling:
+
+- [ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes).
+- [RFC 5646 language tags](https://www.rfc-editor.org/rfc/rfc5646).
 
 ## Importing this library
 
-`import { Language } from "https://esm.sh/gh/doga/language@1.0.2/mod.mjs";`
+`import { Language, lang, LanguageTag, langTag } from "https://esm.sh/gh/doga/language@1.1.0/mod.mjs";`
 
-## Usage
-
-_Tip: Run the following example by typing this in your terminal (requires [Deno](https://deno.land)):_
-
-```shell
-deno run \
-  --allow-net --allow-run --allow-env --allow-read \
-  https://deno.land/x/mdrb@2.0.0/mod.ts \
-  --dax=false --mode=isolated \
-  https://raw.githubusercontent.com/doga/language/main/README.md
-```
+## Usage example
 
 <details data-mdrb>
 <summary>Print out language info for some language codes.</summary>
@@ -29,18 +22,39 @@ Running this example is safe, it will not read or write anything to your filesys
 </details>
 
 ```javascript
-import { Language } from "https://esm.sh/gh/doga/language@1.0.2/mod.mjs";
+import {
+  langTag, lang, LanguageTag, Language
+} from './mod.mjs';
+// } from "https://esm.sh/gh/doga/language@1.1.0/mod.mjs";
 
+// Parse ISO 639 language codes.
 ['en', 'fr', 'de', 'tr'].forEach(iso639_1 => {
-    const lang = Language.fromCode(iso639_1);
-    if(!lang)return;
-    console.info(`Language info for ${lang}:`);
-    console.info(`  ISO 639-1:   ${lang.iso639_1}`);
-    console.info(`  ISO 639-2:   ${lang.iso639_2}`);
-    console.info(`  Name:        ${lang.name}`);
-    console.info(`  Native name: ${lang.nativeName}`);
-    console.info(`  Family:      ${lang.family}`);
-    console.info(`  Wiki URL:    ${lang.wikiUrl}`);
+    const language = lang`${iso639_1}`;
+    if(!language)return;
+    console.group(`Language code: ${language}:`);
+    console.info(`ISO 639-1:   ${language.iso639_1}`);
+    console.info(`ISO 639-2:   ${language.iso639_2}`);
+    console.info(`Name:        ${language.name}`);
+    console.info(`Native name: ${language.nativeName}`);
+    console.info(`Family:      ${language.family}`);
+    console.info(`Wiki URL:    ${language.wikiUrl}`);
+    console.groupEnd();
+});
+
+// Parse RFC 5646 language tags.
+['en-CA', 'fr-FR', 'de-AT', 'tr'].forEach(tag => {
+    const languageTag = langTag`${tag}`;
+    if(!languageTag)return;
+    console.group(`Language tag: ${languageTag}`);
+    console.group(`ISO 639 language info:`);
+    console.info(`ISO 639-1:   ${languageTag.code.iso639_1}`);
+    console.info(`ISO 639-2:   ${languageTag.code.iso639_2}`);
+    console.info(`Name:        ${languageTag.code.name}`);
+    console.info(`Native name: ${languageTag.code.nativeName}`);
+    console.info(`Family:      ${languageTag.code.family}`);
+    console.info(`Wiki URL:    ${languageTag.code.wikiUrl}`);
+    console.groupEnd();
+    console.groupEnd();
 });
 ```
 
@@ -75,6 +89,14 @@ Language info for tr:
   Native name: "Türkçe"
   Family:      "Turkic"
   Wiki URL:    "https://en.wikipedia.org/wiki/Turkish_language"
+```
+
+## Running the usage example
+
+Run the usage example by typing this in your terminal (requires [Deno](https://deno.com)+):
+
+```shell
+deno run --allow-net --allow-run --allow-env --allow-read jsr:@andrewbrey/mdrb@3.0.4 --dax=false --mode=isolated 'https://raw.githubusercontent.com/doga/language/main/README.md'
 ```
 
 ∎
