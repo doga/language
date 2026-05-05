@@ -60,34 +60,66 @@ import {
 Sample output for the code above:
 
 ```text
-Language info for en:
-  ISO 639-1:   "en"
-  ISO 639-2:   "eng"
-  Name:        "English"
-  Native name: "English"
-  Family:      "Indo-European"
-  Wiki URL:    "https://en.wikipedia.org/wiki/English_language"
-Language info for fr:
-  ISO 639-1:   "fr"
-  ISO 639-2:   "fra"
-  Name:        "French"
-  Native name: "français, langue française"
-  Family:      "Indo-European"
-  Wiki URL:    "https://en.wikipedia.org/wiki/French_language"
-Language info for de:
-  ISO 639-1:   "de"
-  ISO 639-2:   "deu"
-  Name:        "German"
-  Native name: "Deutsch"
-  Family:      "Indo-European"
-  Wiki URL:    "https://en.wikipedia.org/wiki/German_language"
-Language info for tr:
-  ISO 639-1:   "tr"
-  ISO 639-2:   "tur"
-  Name:        "Turkish"
-  Native name: "Türkçe"
-  Family:      "Turkic"
-  Wiki URL:    "https://en.wikipedia.org/wiki/Turkish_language"
+Language code: en:
+  ISO 639-1:   en
+  ISO 639-2:   eng
+  Name:        English
+  Native name: English
+  Family:      Indo-European
+  Wiki URL:    https://en.wikipedia.org/wiki/English_language
+Language code: fr:
+  ISO 639-1:   fr
+  ISO 639-2:   fra
+  Name:        French
+  Native name: français, langue française
+  Family:      Indo-European
+  Wiki URL:    https://en.wikipedia.org/wiki/French_language
+Language code: de:
+  ISO 639-1:   de
+  ISO 639-2:   deu
+  Name:        German
+  Native name: Deutsch
+  Family:      Indo-European
+  Wiki URL:    https://en.wikipedia.org/wiki/German_language
+Language code: tr:
+  ISO 639-1:   tr
+  ISO 639-2:   tur
+  Name:        Turkish
+  Native name: Türkçe
+  Family:      Turkic
+  Wiki URL:    https://en.wikipedia.org/wiki/Turkish_language
+Language tag: en-CA
+  ISO 639 language info:
+    ISO 639-1:   en
+    ISO 639-2:   eng
+    Name:        English
+    Native name: English
+    Family:      Indo-European
+    Wiki URL:    https://en.wikipedia.org/wiki/English_language
+Language tag: fr-FR
+  ISO 639 language info:
+    ISO 639-1:   fr
+    ISO 639-2:   fra
+    Name:        French
+    Native name: français, langue française
+    Family:      Indo-European
+    Wiki URL:    https://en.wikipedia.org/wiki/French_language
+Language tag: de-AT
+  ISO 639 language info:
+    ISO 639-1:   de
+    ISO 639-2:   deu
+    Name:        German
+    Native name: Deutsch
+    Family:      Indo-European
+    Wiki URL:    https://en.wikipedia.org/wiki/German_language
+Language tag: tr
+  ISO 639 language info:
+    ISO 639-1:   tr
+    ISO 639-2:   tur
+    Name:        Turkish
+    Native name: Türkçe
+    Family:      Turkic
+    Wiki URL:    https://en.wikipedia.org/wiki/Turkish_language
 ```
 
 ## Running the usage example
