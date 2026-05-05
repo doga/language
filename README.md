@@ -24,8 +24,7 @@ Running this example is safe, it will not read or write anything to your filesys
 ```javascript
 import {
   langTag, lang, LanguageTag, Language
-} from './mod.mjs';
-// } from "https://esm.sh/gh/doga/language@1.1.0/mod.mjs";
+} from "https://esm.sh/gh/doga/language@1.1.0/mod.mjs";
 
 // Parse ISO 639 language codes.
 ['en', 'fr', 'de', 'tr'].forEach(iso639_1 => {
